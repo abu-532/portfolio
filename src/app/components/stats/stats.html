@@ -1,0 +1,16 @@
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-card">
+            @for (stat of stats; track stat.label) {
+            <div class="stat-item" [class.animated]="animated()">
+                <div class="stat-number-wrap">
+                    <span class="stat-bg-number">{{ formatValue(stat) }}{{ stat.suffix }}</span>
+                    <div class="stat-front">
+                        <span class="stat-value">{{ stat.label }}</span>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

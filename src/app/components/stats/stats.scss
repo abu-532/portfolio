@@ -1,0 +1,154 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+.stats-section {
+    padding: 60px 0 80px;
+    background-color: var(--white);
+    // border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+// ─────────────────────────────────────────
+// Grid
+// ─────────────────────────────────────────
+
+.stats-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+// ─────────────────────────────────────────
+// Stat Item
+// ─────────────────────────────────────────
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &:first-child {
+        width: 23%;
+    }
+
+    &:nth-child(2) {
+        width: 17%;
+    }
+
+    &:nth-child(3) {
+        width: 14%;
+    }
+
+    &:nth-child(4) {
+        width: 23%;
+    }
+
+    &:last-child {
+        width: 23%;
+    }
+}
+
+// ─────────────────────────────────────────
+// Number Wrap — ghosted bg + front value
+// ─────────────────────────────────────────
+
+.stat-number-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+    width: 100%;
+    justify-content: center;
+}
+
+// Giant ghosted background number (like reference image)
+.stat-bg-number {
+    position: absolute;
+    bottom: -8px;
+    font-family: var(--font-heading);
+    font-size: 100px;
+    font-weight: var(--heading-weight-2);
+    color: rgba(0, 0, 0, 0.05);
+    line-height: 1;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+    letter-spacing: -2px;
+    transition: color 0.4s ease;
+}
+
+// Foreground number
+.stat-front {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+}
+
+.stat-value {
+    font-family: var(--font-heading);
+    font-size: var(--heading-size-2);
+    font-weight: var(--heading-weight-3);
+    color: var(--black);
+    line-height: 1;
+
+    // Start at 0 opacity, animate in
+    .stat-item & {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+    }
+
+    .stat-item.animated & {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-suffix {
+    font-family: var(--font-heading);
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin-left: 1px;
+
+    .stat-item & {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+    }
+
+    .stat-item.animated & {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ─────────────────────────────────────────
+// Label
+// ─────────────────────────────────────────
+
+.stat-label {
+    font-family: var(--font-body);
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+    color: var(--gray);
+    line-height: 1.5;
+    max-width: 140px;
+
+    .stat-item & {
+        opacity: 0;
+        transform: translateY(8px);
+        transition: opacity 0.4s ease 0.3s, transform 0.4s ease 0.3s;
+    }
+
+    .stat-item.animated & {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

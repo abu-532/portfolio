@@ -1,0 +1,32 @@
+.contact-section {
+    padding: 100px 0;
+
+    .title {
+        text-align: center;
+        font-family: var(--font-heading);
+        font-size: var(--heading-size);
+        font-weight: var(--heading-weight-2);
+        color: var(--black);
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-family: var(--font-body);
+        font-size: var(--text-size-2);
+        font-weight: var(--text-weight);
+        font-style: normal;
+        color: var(--gray);
+        max-width: 90%;
+        margin: 0 auto 40px;
+        text-align: center;
+    }
+
+    .action-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: center;
+    }
+
+
+}

@@ -1,0 +1,77 @@
+.about-section {
+    padding: 100px 0 100px;
+
+    .about-inner {
+        display: flex;
+        align-items: end;
+        width: 100%;
+
+        .about-left {
+            width: 40%;
+
+            .profile {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+
+        .about-right {
+            width: 60%;
+            padding-left: 80px;
+
+            h3 {
+                font-family: var(--font-heading);
+                font-size: var(--heading-size);
+                font-weight: var(--heading-weight-2);
+                margin-bottom: 10px;
+            }
+
+            .profile-desc {
+                margin-bottom: 30px;
+
+                p {
+                    font-family: var(--font-body);
+                    font-size: var(--text-size);
+                    font-weight: var(--text-weight);
+                    color: var(--gray);
+                    margin-bottom: 10px;
+                }
+            }
+
+        }
+    }
+
+    .about-i-do {
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        .about-what-i-do-card {
+            padding: 20px;
+            display: flex;
+            align-items: start;
+            gap: 20px;
+
+            i {
+                font-size: 30px;
+                color: var(--black);
+            }
+
+            h4 {
+                font-family: var(--font-body);
+                font-size: var(--text-size-2);
+                font-weight: var(--heading-weight-2);
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-family: var(--font-body);
+                font-size: var(--text-size);
+                font-weight: var(--text-weight);
+                color: var(--gray);
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

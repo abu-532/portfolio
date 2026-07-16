@@ -1,0 +1,67 @@
+<section class="education-section">
+    <div class="container">
+
+        <h3 class="stroke_name">Education&nbsp;&nbsp;&</h3>
+        <h3 class="simple_name">Certifications</h3>
+
+        <div>
+            <div class="each-row">
+                <div class="group">
+                    <p class="date">Jul 2017 - Apr 2020</p>
+                    <div>
+                        <h3 class="title">Bachelor's of Computer Application</h3>
+                        <p class="sub">M.I.E.T Arts & Science College</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="each-row">
+                <div class="group">
+                    <p class="date">May 2022 - Sep 2022</p>
+                    <div>
+                        <h3 class="title">Frontend Development Training</h3>
+                        <p class="sub">Besant Technologies</p>
+                    </div>
+                </div>
+                <div class="action">
+                    <a href="#" (click)="openModal(certificates[0], $event)"><span>View</span> <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+
+            <div class="each-row">
+                <div class="group">
+                    <p class="date">05 July 2026</p>
+                    <div>
+                        <h3 class="title">One Million Prompters</h3>
+                        <p class="sub">Issued by Dubai Centre for Artificial Intelligence (DCAI)</p>
+                    </div>
+                </div>
+                <div class="action">
+                    <a href="#" (click)="openModal(certificates[1], $event)"><span>View</span> <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal Backdrop & Content -->
+    <div class="modal-backdrop" *ngIf="selectedCert" (click)="closeModal()">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+            <div class="pdf-container">
+                <iframe [src]="(selectedCert.pdfUrl + '#toolbar=0&navpanes=0') | safeUrl" type="application/pdf"
+                    class="pdf-frame"></iframe>
+            </div>
+            <div class="modal-info">
+                <div>
+                    <h4>{{selectedCert.title}}</h4>
+                    <p>{{selectedCert.issuer}}</p>
+                </div>
+                <button class="close-btn" (click)="closeModal()">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

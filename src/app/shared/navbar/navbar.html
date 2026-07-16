@@ -1,0 +1,14 @@
+<header class="main-header" [class.scrolled]="isScrolled">
+    <div class="container">
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a class="nav-item" href="javascript:void(0)" (click)="handleNavClick($event, 'home')">Home</a></li>
+                <li><a class="nav-item" href="javascript:void(0)" (click)="handleNavClick($event, 'about')">About</a></li>
+                <li><a class="nav-item" href="javascript:void(0)" (click)="handleNavClick($event, 'skills')">Skills</a></li>
+                <li><a class="nav-item" href="javascript:void(0)" (click)="handleNavClick($event, 'experience')">Experience</a></li>
+                <li><a class="nav-item" href="javascript:void(0)" (click)="handleNavClick($event, 'projects')">Projects</a></li>
+                <li><a class="nav-item" href="javascript:void(0)" (click)="handleNavClick($event, 'contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

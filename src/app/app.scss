@@ -1,0 +1,75 @@
+/* Floating To Top Button (Right Bottom) */
+.to-top-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        color 0.3s ease;
+    outline: none;
+}
+
+.to-top-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.to-top-text {
+    font-family: var(--font-primary);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    color: #000000;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transition: color 0.3s ease;
+}
+
+.to-top-line-container {
+    width: 1px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.to-top-line-fill {
+    width: 100%;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: height 0.1s ease, background-color 0.3s ease;
+}
+
+/* Over Dark Background State */
+.to-top-btn.over-dark .to-top-text {
+    color: #ffffff;
+}
+
+.to-top-btn.over-dark .to-top-line-container {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.to-top-btn.over-dark .to-top-line-fill {
+    background-color: #ffffff;
+}
+
+/* Hover & Interactive States (Removed red highlight) */
+.to-top-btn:hover {
+    transform: translateY(-6px);
+}

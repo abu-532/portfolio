@@ -1,0 +1,79 @@
+<section class="about-section">
+    <div class="container">
+        <div class="about-inner">
+            <div class="about-left">
+                <img class="profile" src="/assets/images/profile.png" alt="profile">
+            </div>
+            <div class="about-right">
+                <h3>Hello!</h3>
+                <div class="profile-desc">
+                    @if (!isAboutUsPage) {
+                    <p>
+                        I'm <b>Abubakkar Sithiq M</b>, a Full Stack Developer with over 3.5+ years of experience
+                        building modern, scalable, and high-performance web applications.
+                    </p>
+                    <p>
+                        I enjoy transforming ideas into intuitive, responsive, and reliable digital experiences. From
+                        developing dynamic front-end interfaces to building secure back-end services and APIs, I focus
+                        on creating applications that are both efficient and user-centric.
+                    </p>
+                    }
+                    @if (isAboutUsPage) {
+                    <p>
+                        I'm <b>Abubakkar Sithiq M</b>, a Full Stack Developer with over 3.5+ years of experience
+                        building modern, scalable, and high-performance web applications.
+                    </p>
+                    <p>
+                        I enjoy transforming ideas into intuitive, responsive, and reliable digital experiences. From
+                        developing dynamic front-end interfaces to building secure back-end services and APIs, I focus
+                        on creating applications that are both efficient and user-centric.
+                    </p>
+                    <p>
+                        I believe in writing clean, maintainable code and continuously improving my skills by exploring
+                        new technologies and best practices. I enjoy solving complex problems, collaborating with teams,
+                        and delivering solutions that make a real impact.
+                    </p>
+                    }
+                </div>
+                @if (!isAboutUsPage) {
+                <button (click)="navigateToAboutUs()" class="btn-primary">
+                    Learn more
+                </button>
+                } @else {
+                <button (click)="downloadCV()" class="btn-primary">
+                    <i style="margin-right: 10px;" class="fa-solid fa-download"></i>
+                    Download CV
+                </button>
+                }
+            </div>
+        </div>
+        @if (!isAboutUsPage) {
+        <div class="about-i-do">
+            <div class="about-what-i-do-card">
+                <i class="fa-solid fa-desktop"></i>
+                <div class="content">
+                    <h4>Frontend Development</h4>
+                    <p>Building responsive and interactive user interfaces using Angular, React, and modern web
+                        technologies with clean, reusable components.</p>
+                </div>
+            </div>
+            <div class="about-what-i-do-card">
+                <i class="fa-solid fa-server"></i>
+                <div class="content">
+                    <h4>Backend Development</h4>
+                    <p>Developing secure APIs and scalable server-side applications using Node.js, Express.js, and
+                        databases with efficient data management.</p>
+                </div>
+            </div>
+            <div class="about-what-i-do-card">
+                <i class="fa-solid fa-gear"></i>
+                <div class="content">
+                    <h4>Optimization</h4>
+                    <p>Enhancing website visibility, speed, and performance for better user experience and search engine
+                        results.</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</section>

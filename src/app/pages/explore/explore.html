@@ -1,0 +1,90 @@
+<!-- <section class="explore-section">
+    <div class="container">
+        <div class="header-content">
+            <h1 class="bg-title">PORTFOLIO</h1>
+            <div class="header-front">
+                <div class="breadcrumb">
+                    <a href="javascript:void(0)" (click)="scrollToHome()" class="cursor-pointer">Home</a> <span
+                        class="separator">></span>
+                    <span>Explore</span>
+                </div>
+                <h2 class="title">FEATURED PROJECTS</h2>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="page-header">
+    <div class="container">
+        <div class="header-content">
+            <h1 class="bg-title">PORTFOLIO</h1>
+            <div class="header-front">
+                <div class="breadcrumb">
+                    <a href="javascript:void(0)" (click)="scrollToHome()" class="cursor-pointer">Home</a> <span
+                        class="separator">></span>
+                    <span>Projects</span>
+                </div>
+                <h2 class="title">FEATURED PROJECTS</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="explore-section">
+    <div class="container">
+        <div class="explore-grid">
+            @for (project of allProjects; track project.id) {
+            <div class="explore-card" [class.highlighted]="project.highlight">
+                @if (project.highlight) {
+                <div class="highlight-badge">
+                    <i class="fa-solid fa-star"></i>
+                    Featured
+                </div>
+                }
+
+                <!-- Card Image -->
+                <div class="explore-card-image">
+                    <img [src]="project.image" [alt]="project.title + ' Screenshot'" />
+                </div>
+
+                <!-- Card Body -->
+                <div class="explore-card-body">
+                    <div class="explore-card-header">
+                        <div class="explore-project-number">
+                            <i [class]="project.icon"></i>
+                            <span>{{ project.number }}</span>
+                        </div>
+                        <h3 class="explore-project-title">{{ project.title }}</h3>
+                        <p class="explore-project-desc">{{ project.description }}</p>
+                    </div>
+
+                    <!-- Contributions -->
+                    <div class="explore-contributions">
+                        <h4 class="contributions-label">Key Contributions</h4>
+                        <ul class="contributions-list">
+                            @for (contribution of project.contributions; track contribution) {
+                            <li>{{ contribution }}</li>
+                            }
+                        </ul>
+                    </div>
+
+                    <!-- Achievement -->
+                    @if (project.achievement) {
+                    <div class="achievement-block">
+                        <i class="fa-solid fa-trophy"></i>
+                        <p>{{ project.achievement }}</p>
+                    </div>
+                    }
+
+                    <!-- Tech Stack -->
+                    <div class="explore-tags">
+                        @for (tech of project.techStack; track tech) {
+                        <span>{{ tech }}</span>
+                        }
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,1 +1,86 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./styles/fonts";
+
+
+@theme {
+    --color-black: var(--black);
+    --color-white: var(--white);
+    --color-gold: var(--gold);
+    --color-gray: var(--gray);
+    --color-light: var(--light-bg);
+
+    --font-heading: var(--font-heading);
+    --font-body: var(--font-body);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.2px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    line-height: 1.2;
+}
+
+p {
+    font-family: "Mulish", sans-serif;
+    margin: 0;
+    line-height: 2;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+}
+
+:root {
+    --font-heading: "Poppins", sans-serif;
+    --font-body: "Mulish", sans-serif;
+    --black: #000000;
+    --white: #ffffff;
+    --gold: #C9A84C;
+    --gray: #767676;
+    --light-bg: #F8F9FA;
+    --heading-size: 35px;
+    --heading-size-2: 24px;
+    --text-size: 15px;
+    --text-size-2: 17px;
+    --heading-weight: 900;
+    --heading-weight-2: 700;
+    --heading-weight-3: 500;
+    --text-weight: 400;
+}
+
+.btn-primary {
+    height: 60px;
+    padding: 0 50px;
+
+    font-family: var(--font-body);
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
+    letter-spacing: .5px;
+
+    background: var(--black);
+    color: var(--white);
+
+    border: 2px solid var(--black);
+
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        background: transparent;
+        color: var(--black);
+    }
+}

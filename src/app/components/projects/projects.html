@@ -1,0 +1,99 @@
+<section class="projects-section">
+    <div class="container">
+        <div class="projects-header">
+            <div>
+                <h3 class="stroke_name">Featured&nbsp;&nbsp;&nbsp;</h3>
+                <h3 class="simple_name">Projects</h3>
+            </div>
+            <a [routerLink]="['/projects']" class="explore-btn">Explore All <i class="fa-solid fa-angles-right"></i></a>
+        </div>
+
+        <div class="projects-grid">
+
+            <div class="projects-row">
+                <!-- Project 01 — card-large -->
+                <div class="project-card card-large" [routerLink]="['/projects']">
+                    <div class="project-meta">
+                        <div class="project-number">
+                            <i [class]="featuredProjects[0].icon"></i>
+                            <span>{{ featuredProjects[0].number }}</span>
+                        </div>
+                        <h3 class="project-title">{{ featuredProjects[0].title }}</h3>
+                        <p class="project-desc">{{ featuredProjects[0].description }}</p>
+                        <div class="project-tags">
+                            @for (tech of featuredProjects[0].techStack; track tech) {
+                                <span>{{ tech }}</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img [src]="featuredProjects[0].image" [alt]="featuredProjects[0].title + ' Screenshot'" />
+                    </div>
+                </div>
+
+                <!-- Project 02 — card-small -->
+                <div class="project-card card-small" [routerLink]="['/projects']">
+                    <div class="project-meta">
+                        <div class="project-number">
+                            <i [class]="featuredProjects[1].icon"></i>
+                            <span>{{ featuredProjects[1].number }}</span>
+                        </div>
+                        <h3 class="project-title">{{ featuredProjects[1].title }}</h3>
+                        <p class="project-desc">{{ featuredProjects[1].description }}</p>
+                        <div class="project-tags">
+                            @for (tech of featuredProjects[1].techStack; track tech) {
+                                <span>{{ tech }}</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img [src]="featuredProjects[1].image" [alt]="featuredProjects[1].title + ' Screenshot'" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-row row-reverse">
+                <!-- Project 03 — card-small -->
+                <div class="project-card card-small" [routerLink]="['/projects']">
+                    <div class="project-meta">
+                        <div class="project-number">
+                            <i [class]="featuredProjects[2].icon"></i>
+                            <span>{{ featuredProjects[2].number }}</span>
+                        </div>
+                        <h3 class="project-title">{{ featuredProjects[2].title }}</h3>
+                        <p class="project-desc">{{ featuredProjects[2].description }}</p>
+                        <div class="project-tags">
+                            @for (tech of featuredProjects[2].techStack; track tech) {
+                                <span>{{ tech }}</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img [src]="featuredProjects[2].image" [alt]="featuredProjects[2].title + ' Screenshot'" />
+                    </div>
+                </div>
+
+                <!-- Project 04 — card-large -->
+                <div class="project-card card-large" [routerLink]="['/projects']">
+                    <div class="project-meta">
+                        <div class="project-number">
+                            <i [class]="featuredProjects[3].icon"></i>
+                            <span>{{ featuredProjects[3].number }}</span>
+                        </div>
+                        <h3 class="project-title">{{ featuredProjects[3].title }}</h3>
+                        <p class="project-desc">{{ featuredProjects[3].description }}</p>
+                        <div class="project-tags">
+                            @for (tech of featuredProjects[3].techStack; track tech) {
+                                <span>{{ tech }}</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img [src]="featuredProjects[3].image" [alt]="featuredProjects[3].title + ' Screenshot'" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
